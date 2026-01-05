@@ -10,9 +10,9 @@
 start PROC
 	mov eax, 213
 
-	add eax, 432		; 213 + 432
+	add eax, 432		; 213 + 432 = 645 in decimal adica 0x285 in hexa
 
-		ret				; breakpoint sa vedem ce trece prin registru -> start debugging
+		ret				; breakpoint sa vedem ce trece prin registru -> start debugging 
 
 start endp
 
