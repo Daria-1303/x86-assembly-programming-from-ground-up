@@ -1,0 +1,12 @@
+﻿  Assembling SquareCalculator.asm...
+SquareCalculator.asm(1): error A2008: syntax error : .
+SquareCalculator.asm(2): error A2008: syntax error : .
+SquareCalculator.asm(7): error A2070: invalid instruction operands
+SquareCalculator.asm(9): error A2070: invalid instruction operands
+SquareCalculator.asm(10): error A2070: invalid instruction operands
+SquareCalculator.asm(11): error A2070: invalid instruction operands
+SquareCalculator.asm(36): error A2070: invalid instruction operands
+SquareCalculator.asm(37): error A2070: invalid instruction operands
+SquareCalculator.asm(38): error A2070: invalid instruction operands
+SquareCalculator.asm(39): error A2070: invalid instruction operands
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"ArrayEle.1f9bba93\x64\Debug\SquareCalculator.obj" /W3 /errorReport:prompt  /TaSquareCalculator.asm" exited with code 1.
