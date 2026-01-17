@@ -1,0 +1,7 @@
+﻿  Assembling TempConverter.asm...
+TempConverter.asm(6): error A2008: syntax error : .
+TempConverter.asm(17): error A2070: invalid instruction operands
+TempConverter.asm(27): error A2070: invalid instruction operands
+TempConverter.asm(33): error A2070: invalid instruction operands
+TempConverter.asm(42): error A2070: invalid instruction operands
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"Temperat.189a0f4d\x64\Debug\TempConverter.obj" /W3 /errorReport:prompt  /TaTempConverter.asm" exited with code 1.
