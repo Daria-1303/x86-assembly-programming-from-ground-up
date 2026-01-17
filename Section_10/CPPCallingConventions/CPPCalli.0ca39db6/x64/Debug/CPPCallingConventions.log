@@ -1,0 +1,12 @@
+﻿  Assembling CalculateSum.asm...
+CalculateSum.asm(1): error A2008: syntax error : .
+CalculateSum.asm(2): error A2008: syntax error : .
+CalculateSum.asm(8): error A2070: invalid instruction operands
+CalculateSum.asm(11): error A2070: invalid instruction operands
+CalculateSum.asm(12): error A2070: invalid instruction operands
+CalculateSum.asm(13): error A2070: invalid instruction operands
+CalculateSum.asm(54): error A2070: invalid instruction operands
+CalculateSum.asm(55): error A2070: invalid instruction operands
+CalculateSum.asm(56): error A2070: invalid instruction operands
+CalculateSum.asm(58): error A2070: invalid instruction operands
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"CPPCalli.0ca39db6\x64\Debug\CalculateSum.obj" /W3 /errorReport:prompt  /TaCalculateSum.asm" exited with code 1.
