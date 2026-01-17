@@ -1,0 +1,6 @@
+﻿  Assembling CalcArraySum.asm...
+CalcArraySum.asm(1): error A2008: syntax error : .
+CalcArraySum.asm(2): error A2008: syntax error : .
+CalcArraySum.asm(7): error A2070: invalid instruction operands
+CalcArraySum.asm(23): error A2070: invalid instruction operands
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"ArrayEle.e87ee84a\x64\Debug\CalcArraySum.obj" /W3 /errorReport:prompt  /TaCalcArraySum.asm" exited with code 1.
