@@ -1,0 +1,5 @@
+﻿  Assembling MmxMultiply.asm...
+  MmxMultiplication.cpp
+MmxMultiplication.obj : error LNK2019: unresolved external symbol "public: char * __thiscall MmxVal::ToString_i16(char *,unsigned int)" (?ToString_i16@MmxVal@@QAEPADPADI@Z) referenced in function _main
+MmxMultiplication.obj : error LNK2019: unresolved external symbol "public: char * __thiscall MmxVal::ToString_i32(char *,unsigned int)" (?ToString_i32@MmxVal@@QAEPADPADI@Z) referenced in function _main
+C:\Users\daria\Documents\GitHub\Eu\x86-assembly-programming-from-ground-up\Section_13\MmxMultiplication\Debug\MmxMultiplication.exe : fatal error LNK1120: 2 unresolved externals

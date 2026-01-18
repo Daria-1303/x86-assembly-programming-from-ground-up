@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="MmxShift.vcxproj" Id="d3be8a32-624d-4c98-9562-95ffa01d770f" />
+</Solution>
