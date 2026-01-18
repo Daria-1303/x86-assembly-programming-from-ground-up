@@ -1,0 +1,6 @@
+﻿  Assembling Mmx_Addition.asm...
+Mmx_Addition.asm(1): error A2008: syntax error : .
+Mmx_Addition.asm(2): error A2008: syntax error : .
+Mmx_Addition.asm(8): error A2070: invalid instruction operands
+Mmx_Addition.asm(50): error A2070: invalid instruction operands
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"MmxAddition\x64\Debug\Mmx_Addition.obj" /W3 /errorReport:prompt  /TaMmx_Addition.asm" exited with code 1.
