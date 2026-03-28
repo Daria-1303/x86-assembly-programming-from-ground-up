@@ -34,7 +34,7 @@ quit:
 main	endp
 end		main
 
-;EAX = 00000001 EBX = 00DF4008 ECX = 00000007 EDX = 00DF1005 ESI = 00DF1005 EDI = 00DF1005 EIP = 00DF1031 ESP = 012FF814 EBP = 012FF820 EFL = 00000202 
+;EAXï¿½=ï¿½00000001 EBXï¿½=ï¿½00DF4008 ECXï¿½=ï¿½00000007 EDXï¿½=ï¿½00DF1005 ESIï¿½=ï¿½00DF1005 EDIï¿½=ï¿½00DF1005 EIPï¿½=ï¿½00DF1031 ESPï¿½=ï¿½012FF814 EBPï¿½=ï¿½012FF820 EFLï¿½=ï¿½00000202 
 ; eax are 1 pt ca este primul nr non zero
 ; daca punem 4 in loc de 1
 ; iar daca ne umplem array doar de 0 ne va returna 999999

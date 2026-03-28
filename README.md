@@ -2,6 +2,8 @@
 
 ## 1. Descrierea Temelor și Activităților
 
+
+
 Structura proiectelor urmărește învățarea logică, acoperind următoarele domenii cheie:
 
 ### A. Fundamentele Limbajului (Secțiunile 02 - 05)

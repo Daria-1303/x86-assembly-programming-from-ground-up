@@ -16,7 +16,7 @@ AdderASM proc
 
 		pop ebp
 
-		ret				;breakpoint   => EAX = 0000002A   = 42
+		ret				;breakpoint   => EAXï¿½=ï¿½0000002A   = 42
 
 AdderASM endp
 		 end
