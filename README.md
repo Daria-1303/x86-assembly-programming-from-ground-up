@@ -1,8 +1,6 @@
-# x86 Assembly Programming - Portofoliu de Activitate
+# x86 Assembly Programming - Portofoliu de Activitate 
 
 ## 1. Descrierea Temelor și Activităților
-
-
 
 Structura proiectelor urmărește învățarea logică, acoperind următoarele domenii cheie:
 
