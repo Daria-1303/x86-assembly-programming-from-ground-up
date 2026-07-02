@@ -1,53 +1,116 @@
-# x86 Assembly Programming - Portofoliu de Activitate 
+# x86 Assembly Programming From Ground Up — Portfolio
 
-## 1. Descrierea Temelor și Activităților
+> Personal notes and project portfolio from completing the [x86 Assembly Programming From Ground Up](https://www.udemy.com/course/x86-assembly-programming-from-ground-uptm/) Udemy course.
 
-Structura proiectelor urmărește învățarea logică, acoperind următoarele domenii cheie:
-
-### A. Fundamentele Limbajului (Secțiunile 02 - 05)
-Startul a implicat familiarizarea cu sintaxa și mecanismele de bază ale arhitecturii x86:
-*   **Operații Aritmetice Simple**: Implementarea adunărilor și scăderilor simple (`SimpleAddition`) pentru a înțelege utilizarea registrelor generale (EAX, EBX etc.).
-*   **Declararea Datelor**: Lucrul cu diverse tipuri de date (byte, word, dword) și variabile.
-
-### B. Manipularea Memoriei și Algoritmi Elementari (Secțiunile 06 - 08)
-Focusul s-a mutat pe gestionarea memoriei și logica de control:
-*   **Lucrul cu Vectori (Arrays)**: Implementarea algoritmilor de inversare a array-urilor (`ArrayReverser`) și calculul sumelor elementelor (`ArraySum`).
-*   **Pointeri și Accesare**: Utilizarea pointerilor pentru a parcurge și manipula eficient structurile de date.
-*   **Scanarea Datelor**: Algoritmi de căutare și filtrare în seturi de date.
-
-### C. Integrare Avansată și Interfațare cu C++ (Secțiunea 10)
-O etapă crucială a fost legarea codului de asamblare de limbaje de nivel înalt:
-*   **Convenții de Apelare (Calling Conventions)**: Înțelegerea modului în care funcțiile C++ apelează rutine ASM și invers, gestionarea stivei și salvarea registrelor.
-*   **Cod Hibrid**: Proiecte care apelează funcții ASM (ex: `CalculateSum`, `SignedDivMul`) direct din surse C++.
-
-### D. Procesare de Șiruri și Structuri Complexe (Secțiunile 11 - 12)
-*   **Manipulare String-uri**: Numărarea caracterelor și transferul blocurilor de memorie (`StringCharacterCount`, `StringsTransfer`).
-*   **Matrici și Calcule Tabulare**: Procesarea datelor pe linii și coloane (`CalcArrayRowColSum`) și calcule de pătrate perfecte.
-
-### E. Matematică Avansată și Floating Point (Secțiunea 13)
-Rezolvarea unor probleme de calcul numeric folosind coprocesorul matematic sau instrucțiuni dedicate:
-*   **Geometrie și Fizică**: Calculul ariei și volumului sferei (`SphereAreaVolume`), conversii de temperatură (`TempConverter`).
-*   **Statistică**: Calculul mediei și deviației standard (`StdMean`), metoda celor mai mici pătrate (`LeastSquares`).
-*   **Sisteme de Coordonate**: Conversii între sisteme de coordonate (`CoordinateConversions`).
-
-### F. Instrucțiuni SIMD - MMX (Secțiunea 14)
-Optimizarea performanței prin paralelism la nivel de date:
-*   **Operații Vectoriale**: Adunarea, înmulțirea și shiftarea simultană a mai multor elemente de date folosind regiștrii MMX (`MmxAddition`, `MmxMultiply`), demonstrând puterea procesării paralele.
+![Level](https://img.shields.io/badge/level-intermediate-orange)
+![Duration](https://img.shields.io/badge/duration-10--15%20hours-blue)
+![Toolchain](https://img.shields.io/badge/toolchain-MASM%20%7C%20Visual%20Studio%202022-purple)
+![Platform](https://img.shields.io/badge/platform-Windows%20x86%20(32--bit)-lightgrey)
+![Certificate](https://img.shields.io/badge/certificate-completed-brightgreen)
 
 ---
 
-## 2. Descrierea Experienței de Învățare
+## What You'll Learn
 
-### Ce am învățat nou
-*   **Arhitectura Calculatorului**: Am dobândit o înțelegere profundă a modului în care procesorul execută instrucțiunile, cum este organizată memoria (segmentare, stivă, heap) și rolul vital al registrelor.
-*   **Optimizare Low-Level**: Am învățat să optimizez codul pentru viteză și dimensiune
-*   **Debugging**: Depanarea la nivel de regiștri și memorie a fost o abilitate critică dezvoltată, interpretând "dump-uri" de memorie și flag-uri de stare (Carry, Zero, Overflow).
-*   **Maleabilitate**: Capacitatea de a scrie module critice de performanță în ASM și de a le integra într-o aplicație C++ standard.
+By working through the material in this repo you will be able to:
 
-### Gradul de Dificultate
-*   **Curba de Învățare**: Inițial abruptă. Trecerea de la gândirea abstractă specifică limbajelor high-level la gestionarea explicită a fiecărui byte și a stării procesorului a fost provocatoare.
-*   **Provocări**: Gestionarea corectă a stivei (pentru a evita crash-urile tăcute) și înțelegerea tipurilor de date semnate vs. nesemnate (semnalați prin flag-uri) au fost puncte ce au necesitat multă atenție.
-*   **Secțiunile Avansate**: Implementarea algoritmilor matematici (statistici, geometrie) și SIMD a ridicat nivelul de complexitate, necesitând o rigurozitate matematică și logică sporită.
+- **Write and debug real x86 ASM programs** — from a bare-bones `mov eax, 213` up to multi-function modules using all general-purpose registers.
+- **Understand how C++ calls assembly** — implement full cdecl calling conventions (stack frame setup, prologue/epilogue, register preservation, local variable allocation) so ASM functions integrate cleanly into C++ projects.
+- **Use the x87 FPU instruction set** — perform floating-point arithmetic with the FPU stack to implement statistics (mean, standard deviation), geometry (sphere area/volume), coordinate conversions (rectangular ↔ polar via `fpatan` / `fsincos`), and linear regression (least squares).
+- **Process arrays and matrices in ASM** — traverse 1D and 2D arrays using base + index × scale addressing modes, implement nested loops, and compute row/column sums.
+- **Use MMX SIMD instructions** — execute packed integer operations (add, multiply, shift) on 64-bit MMX registers across multiple data widths simultaneously.
 
-### Impresii Personale
-Mi-a placut foarte mult cursul, ultima parte a fost putin mai grea, dar pot sa spun ca am invatat multe lucruri noi. De asemenea, am consolidat ceea ce am invatat la laboratorul de Proiectarea cu Microprocesoare de la facultate. 
+---
+
+## Who This Is For
+
+- CS students who want to connect what they learn in architecture/microprocessors courses to actual running code.
+- Programmers with C or C++ experience who are curious about what happens one level below the compiler.
+- Hobbyists interested in low-level computing, reverse engineering foundations, or performance-critical code.
+
+**Assumed knowledge:** comfortable with C or C++ (pointers, arrays, functions). No prior assembly experience needed — the course starts from scratch.
+
+---
+
+## Course Structure
+
+The sections follow the progression of the original Udemy course. Sections with only images/screenshots contain theory covered in the video lectures.
+
+| Section | Topic | Format | Key Concepts |
+|---------|-------|--------|--------------|
+| 02 | First Assembly Program | `.asm` + VS project | Registers (EAX/EBX/ECX), `mov`, `add`, debugger register watch |
+| 03 | Architecture Overview | Diagrams | Von Neumann vs Harvard, Intel processor evolution |
+| 04 | Digital Logic | Diagrams | AND, OR, NOT, XOR gates — binary foundation |
+| 05 | x86 Basics & Compatibility | `.asm` + screenshots | 16/32/64-bit register sub-registers (AX → EAX → RAX), operating modes, `.model flat` |
+| 06 | Data Declaration & Arrays | `.asm` + C++ | `.data` section, `dword` variables, array reversal with `lodsd` / `std` / `pushfd` |
+| 07 | Debugging x86 | Screenshots | Reading register dumps, memory windows, flag states in VS debugger |
+| 08 | Memory Access Patterns | `.asm` | `OFFSET`, `LENGTHOF`, `TYPE`, pointer traversal, data scanning, array sum loops |
+| 09 | Control Flow | Diagrams | `JMP`, `CMP`, `TEST`, conditional jumps reference table |
+| 10 | Integer Arithmetic + C++ Interop | `.asm` + `.cpp` | All integer sizes (byte/word/dword/qword), 4 addressing modes, `IMUL`/`IDIV`/`CDQ`, cdecl calling convention, stack frames |
+| 11 | Array & Matrix Processing | `.asm` + `.cpp` | Element access, element-wise squaring/cubing, 2D matrix row & column sums with nested loops |
+| 12 | String Operations | `.asm` + `.cpp` | `lodsw`, character counting, memory block transfer |
+| 13 | Floating-Point (x87 FPU) | `.asm` + `.cpp` | FPU stack, `fld`/`fstp`/`fadd`/`fmul`/`fdiv`/`fsqrt`, `fpatan`, `fsincos`, temperature conversion, min/max, sphere geometry, statistics, least squares regression |
+| 14 | MMX SIMD | `.asm` + `.cpp` | `.mmx` directive, `movq`/`paddb`/`paddsb`/`paddw`/`pmullw`/`pmulhw`/`punpcklwd`, jump tables, `emms` |
+
+---
+
+## Requirements & Setup
+
+**Software:**
+- [Visual Studio 2022](https://visualstudio.microsoft.com/) with the **Desktop development with C++** workload installed
+- MASM is bundled with the C++ workload — no separate download needed
+- Windows 10 or 11 (x86/x64 host; projects target Win32)
+
+**No additional packages, pip installs, or Makefiles.** Each section folder contains a self-contained `.vcxproj` file.
+
+---
+
+## How to Use This Repo
+
+1. Clone the repository.
+2. Navigate to any section folder (e.g. `Section_10/CPPCallingConventions/`).
+3. Open the `.vcxproj` or `.sln` file in Visual Studio 2022.
+4. Build → **Debug | Win32** (most projects target 32-bit).
+5. Start debugging (`F5`) and use the **Registers** window (`Debug → Windows → Registers`) and **Memory** window to observe values in real time.
+
+Sections 02–09 build progressively; concepts from each section are used in the next. Sections 13 and 14 are largely self-contained once you've completed Section 10.
+
+> **Note on section order:** Sections 03, 04, 07, and 09 contain only diagrams/screenshots — there is no code to run; they document theory from the video lectures.
+
+---
+
+## Most Complex Project: Least Squares Linear Regression (`Section_13/LeastSquares`)
+
+The most algorithmically demanding project in the repo. A pure x87 FPU implementation of linear regression that:
+
+- Computes Σx, Σy, Σxy, Σx² across a dataset in a single FPU-stack loop.
+- Calculates the denominator `n·Σx² − (Σx)²` and guards against near-zero values using an epsilon comparison (`fcomip` against `1.0E-12`).
+- Solves for slope `m` and intercept `b`, writing results back to C++ pointers via `fstp`.
+- Properly cleans the FPU stack (5 entries) on the error path.
+
+This project demonstrates production-quality ASM: error handling, floating-point precision guards, and clean C++ interoperability — all without a single high-level language construct.
+
+---
+
+## Evidence the Code Works
+
+- Every `.asm` file in Sections 02, 05, 06, and 08 includes commented-out register dump snapshots (e.g., `EAX=21212121`, `ECX=00000000`) captured from the VS debugger — showing the expected state at the breakpoint.
+- Sections 06–14 pair each `.asm` module with a `.cpp` harness that prints results to stdout, making correctness visually verifiable on each run.
+- Screenshot captures of debugger register windows are present in Sections 06, 07, and 08.
+- A completion certificate is included in the repo root (`Certificate.pdf` / `Certificate.jpg`).
+
+---
+
+## Further Resources
+
+- [Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html) — authoritative instruction reference.
+- [MASM Reference (Microsoft Docs)](https://learn.microsoft.com/en-us/cpp/assembler/masm/microsoft-macro-assembler-reference) — directives, operators, and syntax used throughout this course.
+- [Original Udemy Course](https://www.udemy.com/course/x86-assembly-programming-from-ground-uptm/) — video lectures that accompany the code in this repo.
+
+---
+
+## Author
+
+**Daria** — [GitHub](https://github.com/darknick131)
+
+*Open to feedback or questions via GitHub Issues.*
